@@ -334,6 +334,62 @@ footer .container {
     opacity: 1;
 }
 
+/* overordnet grid */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 lige brede kolonner */
+    gap: 2rem; /* afstand mellem kolonnerne */
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  /* Hver grid-item står som kolonne */
+  .grid-item {
+    display: flex;
+    flex-direction: column; /* Sikrer at indholdet stables vertikalt */
+    align-items: center; /* Centrerer indholdet horisontalt */
+    padding: 1rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+  
+  /* Billederne */
+  .grid-item img {
+    width: 60px; /* Justér størrelsen efter behov */
+    height: auto;
+    margin-bottom: 1rem;
+  }
+  
+  /* Overskrifter */
+  .grid-item h2 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Paragraffer */
+  .grid-item p {
+    font-size: 1rem;
+    color: #444;
+  }
+
+  .dialog {
+    position: fixed;
+    top: 50%; /* Vertikal centrering */
+    left: 50%; /* Horisontal centrering */
+    transform: translate(-50%, -50%); /* Flyt dialogen til midten */
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    z-index: 1000;
+    border-radius: 8px; 
+  }
+
+  .dialog-content {
+    text-align: center;
+  }
+  
+  #close-dialog {
+    margin-top: 20px; /* lidt luft over knappen */
+  }
 /* Responsive styles */
 @media (max-width: 768px) {
     header .container {

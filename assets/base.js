@@ -2,6 +2,20 @@
 document.addEventListener('DOMContentLoaded', function() {
     // Get all navigation links that point to sections
     const navLinks = document.querySelectorAll('nav a[href^="#"]');
+    const dialog = document.getElementById('dialog'); //boks som skal åbnes med info
+    const delivery = document.getElementById('delivery'); //hele kolonnen som skal være "trykbar"
+    const closeDialogBtn = document.getElementById('close-dialog');// knappen som lukker dialogen
+
+    // Åbn dialog når delivery kolonnen klikkes
+    delivery.addEventListener('click', function() {
+        dialog.showModal();
+    });
+
+    // Luk dialog når der klikkes på "Luk" knappen
+    closeDialogBtn.addEventListener('click', function() {
+        dialog.close();
+    });
+
 
     // Add click event listener to each link
     navLinks.forEach(link => {
